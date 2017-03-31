@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+// Definition du service d'identification
+service Identite {
+  rpc Identifie (IdentificationRequest) returns (IdentificationReply) {}
+}
+
+message IdentificationRequest {
+  string name = 1;
+  string password = 2;
+}
+
+
+message IdentificationReply {
+  int32 message = 1;
+}
